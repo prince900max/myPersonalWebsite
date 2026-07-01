@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okafor Prince | Software Engineer & Automotive Portfolio</title>
+    <!-- Importing Poppins Font from Google Fonts for a sporty dashboard aesthetic -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Links to your matching style sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header / Hero Banner Section -->
+<header>
+    <img src="image/passport.jpg" alt="Okafor Prince Profile" width="200" height="200">
+    <h1>Okafor Prince</h1>
+    <p>Software Engineer | Automotive Enthusiast</p>
+</header>
+
+<!-- About Me Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello, my name is Prince. I am a Software Engineer born and raised in Abuja, Nigeria. I attended Federal Government College, Kwali, and possess a massive passion for cutting-edge software development and automotive tech.</p>
+</section>
+
+<!-- Skills / Engine Specs Section -->
+<section id="hobbies">
+    <h2>Core Tech Stack</h2>
+    <ul>
+        <li><strong>JAVA:</strong> Building high-performance websites, mobile apps, and desktop applications.</li>
+        <li><strong>PYTHON:</strong> Automation, scripting, and backend logic.</li>
+        <li><strong>FRONTEND:</strong> Responsive layouts with HTML, CSS, and JavaScript.</li>
+        <li><strong>DATABASE:</strong> Structured database management using MySQL.</li>
+        <li><strong>DIAGNOSTICS:</strong> Code optimization and structural debugging.</li>
+    </ul>
+</section>
+
+<!-- Completed Projects Section -->
+<section id="projects">
+    <h2>Completed Projects</h2>
+    <p>A breakdown of live software deployments and digital builds:</p>
+    <ul>
+        <li><strong>TAVRINCE Automobile website:</strong> Custom-tailored automotive platform and vehicle showcase.</li>
+        <li><strong>Tavrince Tea mobile application:</strong> Feature-rich mobile app with smooth UI transitions.</li>
+        <li><strong>Tavrince Notes app:</strong> Lightweight productivity application for daily tasks.</li>
+    </ul>
+
+    <!-- NEW: TAVRINCE Automobile Scrolling Showcase -->
+    <h3 class="showcase-title">TAVRINCE Automobile Showcase</h3>
+    <div class="scroll-container">
+
+
+        <img src="https://unsplash.com" alt="Tavrince UI Screenshot 1">
+        <img src="https://unsplash.com" alt="Tavrince UI Screenshot 2">
+        <img src="https://unsplash.com" alt="Tavrince UI Screenshot 3">
+        <img src="https://unsplash.com" alt="Tavrince UI Screenshot 4">
+    </div>
+</section>
+
+<!--  Interactive Contact Form Section -->
+<section id="contact-form-section">
+    <h2>Send a Message</h2>
+    <p>Drop your details below to discuss a software project or collaborate on a build.</p>
+    <form id="portfolio-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" required placeholder="e.g., John Doe">
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" required placeholder="e.g., john@example.com">
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required placeholder="Let's talk shop..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Fire Message</button>
+    </form>
+</section>
+
+<!--  Contact Links Section -->
+<section id="contact">
+    <h2>Direct Inquiries</h2>
+    <p>Want to bypass the form? Reach out directly via channels below:</p>
+    <ul>
+        <li>Email: <a href="mailto:okaforprince2005@gmail.com">okaforprince2005@gmail.com</a></li>
+        <li>WhatsApp: <a href="https://wa.me" target="_blank">+234 814 807 5192</a></li>
+    </ul>
+</section>
+
+<!-- Page Footer -->
+<footer>
+    <p>&copy; 2026 Okafor Prince Portfolio. Engineered for performance.</p>
+</footer>
+
+<!-- Theme Toggle Switch (Stealth Mode Button) -->
+<button id="theme-toggle" onclick="toggleTheme()">Launch Stealth Mode</button>
+
+<!--   JavaScript snippet to handle interactive layout elements -->
+<script>
+    // Stealth mode theme switcher
+    function toggleTheme() {
+        const body = document.body;
+        const button = document.getElementById('theme-toggle');
+
+        body.classList.toggle('dark-mode');
+
+        if(body.classList.contains('dark-mode')) {
+            button.textContent = "Disengage Stealth";
+        } else {
+            button.textContent = "Launch Stealth Mode";
+        }
+    }
+
+    // Basic interactive contact form logic
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        alert(`Thanks for reaching out, ${name}! Your message was simulated successfully.`);
+        document.getElementById('portfolio-form').reset();
+    }
+</script>
+
+</body>
+</html>
